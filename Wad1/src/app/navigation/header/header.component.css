@@ -1,33 +1,21 @@
-mat-toolbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 ul {
+  style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  list-style: none;
-  justify-content: flex-start;
-  align-items: center;
 }
-
 li {
-  margin-right: 50px;
+  style: none;
 }
-
 a {
   text-decoration: none;
   color: white;
+  margin-right: 5px;
 }
-
-span a {
-  font-weight: bold;
-  margin-right: 30px;
-}
-
 .spacer {
-  display: none;
+  flex: 1 1 auto;
+}
+ul {
+  /* order items next to one another */
+  display: flex;
+  list-style: none;
 }
