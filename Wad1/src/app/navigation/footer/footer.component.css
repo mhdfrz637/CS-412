@@ -1,9 +1,23 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body > .content {
+  flex: 1;
+}
+
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: mediumpurple;
-  color: black;
+  background-color: rebeccapurple;
+  color: darkturquoise;
   text-align: center;
+  padding: 15px 16px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
