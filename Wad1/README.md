@@ -8,36 +8,63 @@ The project serves as an interactive platform demonstrating advanced web develop
 of modern technologies. It incorporates a **Single Page Application (SPA)** powered by **Angular**, seamlessly
 interacting with a **RESTful API** backend built using **Node.js** and **Express.js**.
 
-### Core Features
+## Features
+- **Authentication**: Secure login/signup using JWT.
+- **Post Management**: Users can create, read, and delete posts.
+- **Responsive Design**: Accessible across devices using Angular Material.
 
-- **Frontend:** Developed with Angular, styled using CSS and Angular Materials, delivering a responsive and intuitive interface.
-- **Backend:** Built on Node.js and Express.js, implementing RESTful principles for modularity and scalability.
-- **Database:** Integrated with MongoDB for efficient data storage and retrieval.
-- **Authentication:** Secured with JWT (JSON Web Token) for encrypted communication and secure user sessions.
-- **File Handling:** Includes pagination and image handling for dynamic content display.
+## Technologies Used
+- **Frontend**: Angular, Angular Material
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB, Mongoose
+- **Authentication**: JWT, bcrypt
+- **Tools**: Git, Postman, WebStorm
 
-The SPA communicates with the backend API through HTTP requests, ensuring a smooth flow of data between the client
-and server. This architecture separates the presentation layer from the data logic, enhancing maintainability and scalability.
+## Getting Started
 
-## Design Specifications
+### Prerequisites
+- Node.js (latest version recommended)
+- Angular CLI
+- MongoDB (local or cloud)
+- Git
 
-### Architecture
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mhdfrz637/CS-412
+   cd MyApp
+   ```
+2. Install dependencies for backend:
+   ```bash
+   npm install
+   ```
+3. Navigate to the Angular frontend and install dependencies:
+   ```bash
+   cd src
+   npm install
+   ```
 
-1. **Frontend (Angular):**
-  - Component-based structure for reusable UI components.
-  - Services for managing API calls and application state.
-  - Routing module for SPA navigation.
+### Running the Application
+- Start the backend server:
+  ```bash
+  npm start
+  ```
+- Start the Angular frontend:
+  ```bash
+  ng serve
+  ```
+- Visit the application at `http://localhost:4200`.
 
-2. **Backend (Node.js & Express):**
-  - Organized into middleware, routes, and models.
-  - Implements secure authentication and authorization strategies.
-  - Handles error management and validation comprehensively.
+## API Endpoints
+- **User Routes**:
+  - POST `/api/user/signup` - Register a new user.
+  - POST `/api/user/login` - Login and receive a JWT.
+- **Post Routes**:
+  - GET `/api/posts` - Fetch all posts.
+  - POST `/api/posts` - Create a new post.
+  - DELETE `/api/posts/:id` - Delete a specific post.
 
-3. **Database (MongoDB):**
-  - NoSQL database for efficient storage of user and post data.
-  - Integrated with the backend using Mongoose ORM.
-
-### File Structure
+## File Structure
 
 ```
 Wad1/
@@ -116,5 +143,16 @@ Wad1/
 ├── tsconfig.json
 └── tsconfig.spec.json
 ```
+
+
+## Testing
+- To run backend tests:
+  ```bash
+  npm test
+  ```
+- To test the frontend:
+  ```bash
+  ng test
+  ```
 
 
