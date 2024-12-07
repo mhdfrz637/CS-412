@@ -1,43 +1,120 @@
-Description:
-This repository contains the final project for the CS-412 course, a web-based application designed with user authentication, database integration, and robust functionality to handle multiple users. The application is structured to ensure clean, maintainable code and adheres to industry-standard practices for naming conventions, file organization, and error handling.
 
-Features:
--User Authentication: Secure login and registration functionality with encrypted password storage.
--Database Integration: All user actions are saved to a database for persistent storage.
--Multi-User Support: Handles multiple users simultaneously with proper session management.
--Error-Free Execution: Code is clean and functions correctly with no console errors.
--Responsive UI: Designed for usability across different devices and browsers.
+# MyApp
 
-Technology Stack
--Frontend: HTML, CSS, JavaScript
--Backend: Node.js, Express.js
--Database: MongoDB
--Authentication: Passport.js or JWT (mention the one used)
--Tools and Libraries:
-NPM packages (e.g., dotenv, bcrypt, etc.)
-Postman (for API testing)
-GitHub for version control
+## Summary
 
-Code Conventions
--Naming:
-Variables: camelCase
-Functions: camelCase
-Files: kebab-case
--Structure:
-Clean, modular code with separation of concerns.
--Comments:
-Minimal inline comments for clarity without clutter.
+MyApp is a feature-rich web application developed as part of the CS-412 Web Application Development course.
+The project serves as an interactive platform demonstrating advanced web development concepts and the integration
+of modern technologies. It incorporates a **Single Page Application (SPA)** powered by **Angular**, seamlessly
+interacting with a **RESTful API** backend built using **Node.js** and **Express.js**.
 
-Functional Requirements
--Authentication:
-Users can register and log in.
-Secure password hashing with bcrypt.
-Proper session or token management for authentication.
--Database Operations:
-Save, retrieve, and update user data in MongoDB.
-Error handling for database connectivity issues.
--Error-Free Execution:
-The application runs without errors in the console.
-Validation for user input to prevent crashes or SQL injections.
--Multi-User Support:
-Handles concurrent users seamlessly.
+### Core Features
+
+- **Frontend:** Developed with Angular, styled using CSS and Angular Materials, delivering a responsive and intuitive interface.
+- **Backend:** Built on Node.js and Express.js, implementing RESTful principles for modularity and scalability.
+- **Database:** Integrated with MongoDB for efficient data storage and retrieval.
+- **Authentication:** Secured with JWT (JSON Web Token) for encrypted communication and secure user sessions.
+- **File Handling:** Includes pagination and image handling for dynamic content display.
+
+The SPA communicates with the backend API through HTTP requests, ensuring a smooth flow of data between the client
+and server. This architecture separates the presentation layer from the data logic, enhancing maintainability and scalability.
+
+## Design Specifications
+
+### Architecture
+
+1. **Frontend (Angular):**
+  - Component-based structure for reusable UI components.
+  - Services for managing API calls and application state.
+  - Routing module for SPA navigation.
+
+2. **Backend (Node.js & Express):**
+  - Organized into middleware, routes, and models.
+  - Implements secure authentication and authorization strategies.
+  - Handles error management and validation comprehensively.
+
+3. **Database (MongoDB):**
+  - NoSQL database for efficient storage of user and post data.
+  - Integrated with the backend using Mongoose ORM.
+
+### File Structure
+
+```
+Wad1/
+├── .angular/
+├── .vscode/
+│   ├── extensions.json
+│   ├── launch.json
+│   ├── tasks.json
+├── backend/
+│   ├── middleware/
+│   │   └── check-auth.js
+│   ├── model/
+│   │   ├── post.js
+│   │   └── user.js
+│   ├── routes/
+│   │   ├── post.js
+│   │   └── user.js
+│   ├── app.js
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
+├── node_modules/    [library root]
+├── src/
+│   ├── app/
+│   │   ├── auth/
+│   │   │   ├── login/
+│   │   │   │   ├── login.component.css
+│   │   │   │   ├── login.component.html
+│   │   │   │   └── login.component.ts
+│   │   │   ├── signup/
+│   │   │   │   ├── signup.component.css
+│   │   │   │   ├── signup.component.html
+│   │   │   │   └── signup.component.ts
+│   │   │   ├── auth.guard.ts
+│   │   │   ├── auth.service.ts
+│   │   │   ├── auth-data.model.ts
+│   │   │   └── auth-interceptor.ts
+│   │   ├── navigation/
+│   │   │   ├── footer/
+│   │   │   │   ├── footer.component.css
+│   │   │   │   ├── footer.component.html
+│   │   │   │   └── footer.component.ts
+│   │   │   └── header/
+│   │   │       ├── header.component.css
+│   │   │       ├── header.component.html
+│   │   │       └── header.component.ts
+│   │   ├── posts/
+│   │   │   ├── create-post/
+│   │   │   │   ├── create-post.component.css
+│   │   │   │   ├── create-post.component.html
+│   │   │   │   └── create-post.component.ts
+│   │   │   ├── post-list/
+│   │   │   │   ├── post-list.component.css
+│   │   │   │   ├── post-list.component.html
+│   │   │   │   └── post-list.component.ts
+│   │   │   ├── post.model.ts
+│   │   │   └── post.service.ts
+│   │   ├── app.component.css
+│   │   ├── app.component.html
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   └── app-routing.module.ts
+│   ├── assets/
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   ├── main.ts
+│   │   └── styles.css
+├── .editorconfig
+├── .gitignore
+├── angular.json
+├── package.json
+├── package-lock.json
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+└── tsconfig.spec.json
+```
+
+
