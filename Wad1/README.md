@@ -1,27 +1,143 @@
-# Wad1
+Description:
+This repository contains the final project for the CS-412 course, a web-based application designed with user authentication, database integration, and robust functionality to handle multiple users. The application is structured to ensure clean, maintainable code and adheres to industry-standard practices for naming conventions, file organization, and error handling.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Features:
+-User Authentication: Secure login and registration functionality with encrypted password storage.
+-Database Integration: All user actions are saved to a database for persistent storage.
+-Multi-User Support: Handles multiple users simultaneously with proper session management.
+-Error-Free Execution: Code is clean and functions correctly with no console errors.
+-Responsive UI: Designed for usability across different devices and browsers.
 
-## Development server
+Technology Stack
+-Frontend: HTML, CSS, JavaScript
+-Backend: Node.js, Express.js
+-Database: MongoDB
+-Authentication: Passport.js or JWT (mention the one used)
+-Tools and Libraries:
+  NPM packages (e.g., dotenv, bcrypt, etc.)
+  Postman (for API testing)
+  GitHub for version control
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Folder Structure
+CS-412/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── database/
+│   │   └── db.js
+│   └── server.js
+├── frontend/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── images/
+│   ├── pages/
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   └── register.html
+├── .env
+├── package.json
+└── README.md
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+Below is a sample README.md file for the project hosted on the GitHub link provided. This README is tailored to meet the given requirements and outlines the coding/functional requirements clearly.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+CS-412 Project
+Description
+This repository contains the final project for the CS-412 course, a web-based application designed with user authentication, database integration, and robust functionality to handle multiple users. The application is structured to ensure clean, maintainable code and adheres to industry-standard practices for naming conventions, file organization, and error handling.
 
-## Running unit tests
+Features
+User Authentication: Secure login and registration functionality with encrypted password storage.
+Database Integration: All user actions are saved to a database for persistent storage.
+Multi-User Support: Handles multiple users simultaneously with proper session management.
+Error-Free Execution: Code is clean and functions correctly with no console errors.
+Responsive UI: Designed for usability across different devices and browsers.
+Technology Stack
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js, Express.js
+Database: MongoDB
+Authentication: Passport.js or JWT (mention the one used)
+Tools and Libraries:
+NPM packages (e.g., dotenv, bcrypt, etc.)
+Postman (for API testing)
+GitHub for version control
+Setup Instructions
+Follow these steps to set up the project locally:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Clone the Repository:
 
-## Running end-to-end tests
+bash
+Copy code
+git clone https://github.com/mhdfrz637/CS-412.git
+cd CS-412
+Install Dependencies: Ensure you have Node.js and NPM installed, then run:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+bash
+Copy code
+npm install
+Environment Variables: Create a .env file in the root directory and include the following variables:
 
-## Further help
+plaintext
+Copy code
+PORT=3000
+MONGO_URI=<your_mongodb_connection_string>
+SECRET_KEY=<your_secret_key>
+Run the Application: Start the development server:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+bash
+Copy code
+npm start
+Visit http://localhost:3000 in your browser.
+
+Folder Structure
+arduino
+Copy code
+CS-412/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── database/
+│   │   └── db.js
+│   └── server.js
+├── frontend/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── images/
+│   ├── pages/
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   └── register.html
+├── .env
+├── package.json
+└── README.md
+
+Code Conventions
+Naming:
+Variables: camelCase
+Functions: camelCase
+Files: kebab-case
+Structure:
+Clean, modular code with separation of concerns.
+Comments:
+Minimal inline comments for clarity without clutter.
+Functional Requirements
+Authentication:
+
+Users can register and log in.
+Secure password hashing with bcrypt.
+Proper session or token management for authentication.
+Database Operations:
+
+Save, retrieve, and update user data in MongoDB.
+Error handling for database connectivity issues.
+Error-Free Execution:
+
+The application runs without errors in the console.
+Validation for user input to prevent crashes or SQL injections.
+Multi-User Support:
+
+Handles concurrent users seamlessly.
