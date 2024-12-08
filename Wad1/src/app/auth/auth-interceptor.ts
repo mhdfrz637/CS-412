@@ -9,6 +9,11 @@ export class AuthInterceptor implements HttpInterceptor {
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
+
+    if(req.url.includes("https://quotes-api-self.vercel.app/quote")) {
+      return next.handle(req);
+    }
+
     const authToken = this.authService.getToken();
     const authRequest = req.clone({
       headers: req.headers.set('authorization', 'Bearer ' + authToken)

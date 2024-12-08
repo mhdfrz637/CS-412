@@ -5,6 +5,7 @@ import {CreatePostComponent} from "./posts/create-post/create-post.component";
 import {SignupComponent} from "./auth/signup/signup.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {authGuard} from "./auth/auth.guard";
+import {QuotesComponent} from "./quotes/quotes.component";
 
 const routes: Routes = [
   {path:'', component: PostListComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'edit/:postId', component: CreatePostComponent, canActivate: [authGuard]},
   {path:'login', component: LoginComponent},
   {path:'signup', component: SignupComponent},
+  {path:'quotes', component: QuotesComponent},
 ];
 
 @NgModule({
